@@ -1,12 +1,15 @@
 // import 'package:chat_app/Models/friends.dart';
+import 'package:camera/camera.dart';
 import 'package:chat_app/Screens/call_screen.dart';
 import 'package:chat_app/Screens/camera_screen.dart';
 import 'package:chat_app/Screens/chat_screen.dart';
 import 'package:chat_app/Screens/status_screen.dart';
+import 'package:chat_app/main.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
   static const routName = "/homepage";
+
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -58,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: TabBarView(
           children: <Widget>[
-            MyCamera(),
+            MyCamera(cameras),
             ChatScreen(),
             MyStatusCreen(),
             MyCallScreen(),

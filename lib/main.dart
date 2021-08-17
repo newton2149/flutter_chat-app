@@ -1,9 +1,13 @@
+import 'package:camera/camera.dart';
+import 'package:chat_app/Screens/camera_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'Screens/homepage.dart';
 import 'Screens/individual_chat.dart';
 import 'Screens/login_screen.dart';
 import "./Screens/chat_screen.dart";
+
+List<CameraDescription> cameras = [];
 void main() {
   runApp(MyApp());
 }
@@ -31,8 +35,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: LoginScreen(),
       routes: {
-        MyHomePage.routName:(ctx)=>MyHomePage(),
-        ChatScreen.routName : (ctx)=>ChatScreen(),
+        MyHomePage.routName: (ctx) => MyHomePage(),
+        ChatScreen.routName: (ctx) => ChatScreen(),
         IndividualChat.routName: (ctx) => IndividualChat(),
       },
     );
